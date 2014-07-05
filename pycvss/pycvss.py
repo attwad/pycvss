@@ -9,12 +9,14 @@ Usage:
   # Or from a vector:
   c = Cvss.from_vector("AV:N/CDP:L/E:F")
   # Get scores.
-  c.to_vector())         # "AV:N/CDP:L/E:F"
-  c.base_score)          # 7.8
-  c.temporal_score)      # 6.4
-  c.environmental_score) # 9.2
+  c.to_vector()          # "AV:N/CDP:L/E:F"
+  c.base_score           # 7.8
+  c.temporal_score       # 6.4
+  c.environmental_score  # 9.2
+
+More details at:
+http://www.first.org/cvss/cvss-guide
 """
-# http://www.first.org/cvss/cvss-guide
 
 import collections
 import enum
