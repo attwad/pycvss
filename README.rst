@@ -11,6 +11,12 @@ This library was developped following the specifications at
 http://www.first.org/cvss/cvss-guide
 and is currently in a stable state.
 
+PyCvss is available in the cheeseshop, you can start using it with
+
+.. code-block:: bash
+
+  pip install pycvss
+
 Features
 ========
 
