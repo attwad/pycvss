@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='pycvss',
-    version='1.0.1',
+    version='1.0.2',
     author='attwad',
     author_email='tmusoft@gmail.com',
     description=(

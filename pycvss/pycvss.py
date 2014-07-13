@@ -171,6 +171,11 @@ class Cvss(object):
     """
     for val in self._ALL_VECS:
       if vec in val:
+        # First remove any other value already present.
+        for maybe_existing in val:
+          if maybe_existing in self._vectors:
+            self._vectors.remove(maybe_existing)
+        # Then add our vector.
         self._vectors.add(vec)
         return
     raise ValueError("Vector %s not a valid Cvss enum." % vec)
@@ -184,6 +189,10 @@ class Cvss(object):
     if vec in self._vectors:
       self._vectors.remove(vec)
       return
+
+  def has(self, vec):
+    """Returns True if the current construct has the given vector."""
+    return vec in self._vectors
 
   @classmethod
   def from_vector(cls, vector):

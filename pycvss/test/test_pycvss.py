@@ -138,5 +138,19 @@ class TestPyCvss(unittest.TestCase):
     c = Cvss()
     self.assertTrue(str(c))
 
+  def test_set_removes_existing(self):
+    c = Cvss()
+    c.set(AV.network)
+    self.assertEqual("AV:N", c.to_vector())
+    c.set(AV.local)
+    self.assertEqual("AV:L", c.to_vector())
+
+  def test_has(self):
+    c = Cvss()
+    c.set(AV.network)
+    self.assertTrue(c.has(AV.network))
+    self.assertFalse(c.has(AV.local))
+
+
 if __name__ == "__main__":
   unittest.main()
