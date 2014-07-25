@@ -7,6 +7,9 @@ Easily manipulate and compute scores according to the Common Vulnerability Scori
 Current status
 ==============
 
+.. image:: https://travis-ci.org/attwad/pycvss.svg?branch=master
+    :target: https://travis-ci.org/attwad/pycvss
+
 This library was developped following the specifications at
 http://www.first.org/cvss/cvss-guide
 and is currently in a stable state.
